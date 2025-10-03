@@ -74,7 +74,7 @@ _G.HitboxColor = Color3.fromRGB(0, 85, 255) -- Default blue hitbox color
 
 Rayfield:Notify({
    Title = "Successfully executed Externalcists",
-   Content = "Best Murder vs Sheriff script",
+   Content = "Da hood bests script",
    Duration = 6.5,
 })
 
@@ -609,18 +609,6 @@ local MiscDivider = MiscTab:CreateDivider()
 -- Toggle button
 local MiscToggle = MiscTab:CreateToggle({
    Name = "Animation changer🚶‍♂",
-   CurrentValue = false,
-   Flag = "Toggle1", -- Make sure this flag is unique
-   Callback = function(Value)
-      if Value then
-         -- Fixed loadstring link (make sure this is a valid raw link!)
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/RubyBoo4life/Scripts/main/animations.vis'))()
-      end
-   end,
-})
-
-local MiscToggle = MiscTab:CreateToggle({
-   Name = "FE korblox",
    CurrentValue = false,
    Flag = "Toggle1", -- Make sure this flag is unique
    Callback = function(Value)
