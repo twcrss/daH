@@ -60,9 +60,12 @@ local Window = Rayfield:CreateWindow({
       Subtitle = "Key System",
       Note = "Join server in misc tab",
       FileName = "Externalcists Key",
-      SaveKey = false,
-      GrabKeyFromSite = true,
-      Key = {"https://pastebin.com/raw/3vdxBA3Y"}
+      SaveKey=false,
+      GrabKeyFromSite=false, -- disables easy grabbing
+      Key=(function()
+         local encoded_url = "\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\51\118\100\120\66\65\51\89"
+         return {string.gsub(encoded_url, ".", function(c) return string.char(string.byte(c)) end)}
+      end)()
    }
 })
 
